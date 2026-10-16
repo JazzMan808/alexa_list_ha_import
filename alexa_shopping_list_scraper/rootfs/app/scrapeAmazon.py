@@ -453,7 +453,7 @@ class AmazonShoppingListScraper:
                     pw_visible = False
                 
                 if not pw_visible:
-                    continue_btn.click()
+                    passkey_btn = self.driver.find_element(By.ID, 'auth-signin-button')
                     time.sleep(0.8)
                 else:
                     log("ℹ️ Combined login page detected, skipping 'Continue' click.")
